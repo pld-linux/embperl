@@ -1,0 +1,3 @@
+- resolved BR, _noautoreqdep for perl(CGI)
+- rel. 2
+  WARNING: we probably need 2 packages here - for apache-[12]
