@@ -3,9 +3,10 @@ Summary:	Embedded perl - building dynamic Websites with Perl
 Summary(pl):	Osadzony perl - budowanie dynamicznych stron przy u¿yciu Perla
 Name:		embperl
 Version:	1.3.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		Networking/Daemons
+Group(de):	Netzwerkwesen/Server
 Group(pl):	Sieciowe/Serwery
 Source0:	ftp://ftp.dev.ecos.de/pub/perl/embperl/HTML-Embperl-%{version}.tar.gz
 Patch0:		%{name}-makefile.patch
@@ -22,13 +23,16 @@ BuildRequires:	perl(File::Spec)
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Embperl gives you the power to embed Perl code in your HTML documents and
-the ability to build your Web site out of small reusable objects in a
-OO-style. You can also take advantage all available Perl modules, (including
-DBI for database access) use their functionality and easily include their
-output into your web pages.
+Embperl gives you the power to embed Perl code in your HTML documents
+and the ability to build your Web site out of small reusable objects
+in a OO-style. You can also take advantage all available Perl modules,
+(including DBI for database access) use their functionality and easily
+include their output into your web pages.
 
 %description -l pl
+Embperl daje moc zagnie¿d¿ania kodu Perla w dokumentach HTML i
+mo¿liwo¶æ budowania stron WWW z ma³ych obiektów. Mo¿na wykorzystaæ
+wszystkie dostêpne modu³y Perla (w tym DBI do dostêpu do baz danych).
 
 %prep
 %setup -q -n HTML-Embperl-%{version}
