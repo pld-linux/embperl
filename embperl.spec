@@ -46,8 +46,6 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_examplesdir}
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf README TODO eg/README
-
 cp -a eg $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
 %clean
@@ -55,7 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README TODO eg/README
 %attr(755,root,root) %{_bindir}/*.pl
 %{perl_sitearch}/HTML/Embperl*
 %dir %{perl_sitearch}/auto/HTML/Embperl
