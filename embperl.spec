@@ -7,6 +7,7 @@ Release:	3
 License:	GPL
 Group:		Networking/Daemons
 Source0:	ftp://ftp.dev.ecos.de/pub/perl/embperl/HTML-Embperl-%{version}.tar.gz
+# Source0-md5:	f2a4579210f7797e1ff4d756f3b7e037
 Patch0:		%{name}-makefile.patch
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	apache-devel
