@@ -3,12 +3,12 @@ Summary:	Embedded perl - building dynamic Websites with Perl
 Summary(pl):	Osadzony perl - budowanie dynamicznych stron przy u¿yciu Perla
 Name:		embperl
 Version:	1.3.3
-Release:	2
+Release:	3
 License:	GPL
 Group:		Networking/Daemons
 Source0:	ftp://ftp.dev.ecos.de/pub/perl/embperl/HTML-Embperl-%{version}.tar.gz
 Patch0:		%{name}-makefile.patch
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	apache-devel
 BuildRequires:	apache-mod_perl
 BuildRequires:	apache-mod_actions
@@ -37,7 +37,8 @@ wszystkie dostêpne modu³y Perla (w tym DBI do dostêpu do baz danych).
 %patch0 -p1
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor
 %{__make} CFLAGS="%{rpmcflags}"
 
 %install
@@ -46,7 +47,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_examplesdir}
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-cp -a eg $RPM_BUILD_ROOT%{_examplesdir}/%{name}
+cp -a eg $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -55,10 +56,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README TODO eg/README
 %attr(755,root,root) %{_bindir}/*.pl
-%{perl_sitearch}/HTML/Embperl*
-%dir %{perl_sitearch}/auto/HTML/Embperl
-%{perl_sitearch}/auto/HTML/Embperl/Embperl.bs
-%attr(755,root,root) %{perl_sitearch}/auto/HTML/Embperl/Embperl.so
+%{perl_vendorarch}/HTML/Embperl*
+%dir %{perl_vendorarch}/auto/HTML/Embperl
+%{perl_vendorarch}/auto/HTML/Embperl/Embperl.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/HTML/Embperl/Embperl.so
 %{_mandir}/man1/*
 %{_mandir}/man3/*
-%{_examplesdir}/%{name}
+%{_examplesdir}/%{name}-%{version}
