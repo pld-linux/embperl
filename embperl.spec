@@ -6,8 +6,6 @@ Version:	1.3.3
 Release:	2
 License:	GPL
 Group:		Networking/Daemons
-Group(de):	Netzwerkwesen/Server
-Group(pl):	Sieciowe/Serwery
 Source0:	ftp://ftp.dev.ecos.de/pub/perl/embperl/HTML-Embperl-%{version}.tar.gz
 Patch0:		%{name}-makefile.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-16
