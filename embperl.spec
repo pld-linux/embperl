@@ -37,7 +37,7 @@ wszystkie dostêpne modu³y Perla (w tym DBI do dostêpu do baz danych).
 %patch0 -p1
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make} CFLAGS="%{rpmcflags}"
 
 %install
