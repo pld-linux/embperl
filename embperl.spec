@@ -11,15 +11,14 @@ Source0:	ftp://ftp.dev.ecos.de/pub/perl/embperl/HTML-Embperl-%{version}.tar.gz
 Patch0:		%{name}-makefile.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	apache-devel
+BuildRequires:	apache-mod_perl
+BuildRequires:	apache-mod_actions
 BuildRequires:	perl-devel
 BuildRequires:	perl(Apache::Session)
 BuildRequires:	perl(CGI)
 BuildRequires:	perl(HTML::HeadParser)
 BuildRequires:	perl(LWP::UserAgent)
 BuildRequires:	perl(File::Spec)
-Requires:	apache
-Requires:	apache-mod_perl
-Requires:	apache-mod_actions
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
