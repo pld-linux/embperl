@@ -9,7 +9,6 @@ Group:		Networking/Daemons
 Source0:	ftp://ftp.dev.ecos.de/pub/perl/embperl/HTML-Embperl-%{version}.tar.gz
 # Source0-md5:	f2a4579210f7797e1ff4d756f3b7e037
 Patch0:		%{name}-makefile.patch
-BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	apache-devel
 BuildRequires:	apache-mod_perl
 BuildRequires:	apache-mod_actions
@@ -19,6 +18,7 @@ BuildRequires:	perl(CGI)
 BuildRequires:	perl(HTML::HeadParser)
 BuildRequires:	perl(LWP::UserAgent)
 BuildRequires:	perl(File::Spec)
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -44,9 +44,10 @@ wszystkie dostêpne modu³y Perla (w tym DBI do dostêpu do baz danych).
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT%{_examplesdir}
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 cp -a eg $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
