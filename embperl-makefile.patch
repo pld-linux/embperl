@@ -1,0 +1,42 @@
+--- HTML-Embperl-1.3.3/Makefile.PL	Tue May 29 07:26:06 2001
++++ HTML-Embperl-1.3.3-/Makefile.PL	Fri Jun 22 22:41:08 2001
+@@ -429,7 +429,9 @@
+ 
+ 
+ 
+-$apache = GetYesNo ("Build with support for Apache mod_perl?", 'y') if (!$apache) ;
++# $apache = GetYesNo ("Build with support for Apache mod_perl?", 'y') if (!$apache) ;
++$apache = 1;
++$apache_src = "/usr/include/apache";
+ 
+ if ($apache && $apache_src ne '')
+     {
+@@ -444,7 +446,8 @@
+ 
+     if (-e "$apache_src/httpd.h" || -e "$apache_src/main/httpd.h" || -e "$apache_src/include/httpd.h")
+ 	    {
+-	    $b = GetYesNo ("Use $apache_src as Apache source", 'y') if (!$b) ;
++	    # $b = GetYesNo ("Use $apache_src as Apache source", 'y') if (!$b) ;
++	    $b = 1;
+ 	    }
+     }
+ 
+@@ -638,7 +641,8 @@
+         
+         if (!-e $EPHTTPD)
+             {
+-            $EPHTTPD = GetString ("Enter path and file to start as httpd", "$EPHTTPD") ;
++            # $EPHTTPD = GetString ("Enter path and file to start as httpd", "$EPHTTPD") ;
++	    $EPHTTPD = "/usr/sbin/httpd";
+             }
+ 	
+ 	$EPMODPERL="" ;
+@@ -677,7 +681,7 @@
+     $EPBINDIR	  = dirname ($EPHTTPD) ;    
+     $EPMODPERL	  = '' ;
+     
+-    $addmodpath = '' ;
++    $addmodpath = '/usr/lib/apache' ;
+     while (($mod, $opt) = each %neededmodules)
+ 	{
+ 	if (!grep (/$mod/, @modules))
