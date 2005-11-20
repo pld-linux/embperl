@@ -9,10 +9,8 @@ Group:		Networking/Daemons
 Source0:	ftp://ftp.dev.ecos.de/pub/perl/embperl/HTML-Embperl-%{version}.tar.gz
 # Source0-md5:	b360a0f9ba5d5e35f6426c81dd91933d
 Patch0:		%{name}-makefile.patch
-BuildRequires:	apache-devel
-BuildRequires:	apache-mod_perl
-BuildRequires:	apache-mod_actions
-BuildRequires:	apache-mod_dir
+BuildRequires:	apache-devel >= 2.0
+BuildRequires:	apache-mod_perl >= 2.0
 BuildRequires:	perl-devel
 BuildRequires:	perl-Apache-Session
 BuildRequires:	perl(CGI)
