@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Embedded perl - building dynamic Websites with Perl
-Summary(pl.UTF-8):   Osadzony perl - budowanie dynamicznych stron przy użyciu Perla
+Summary(pl.UTF-8):	Osadzony perl - budowanie dynamicznych stron przy użyciu Perla
 Name:		embperl
 Version:	1.3.6
 Release:	3
