@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Embedded perl - building dynamic Websites with Perl
-Summary(pl):	Osadzony perl - budowanie dynamicznych stron przy u¿yciu Perla
+Summary(pl.UTF-8):   Osadzony perl - budowanie dynamicznych stron przy uÅ¼yciu Perla
 Name:		embperl
 Version:	1.3.6
 Release:	3
@@ -29,10 +29,10 @@ in a OO-style. You can also take advantage all available Perl modules,
 (including DBI for database access) use their functionality and easily
 include their output into your web pages.
 
-%description -l pl
-Embperl daje moc zagnie¿d¿ania kodu Perla w dokumentach HTML i
-mo¿liwo¶æ budowania stron WWW z ma³ych obiektów. Mo¿na wykorzystaæ
-wszystkie dostêpne modu³y Perla (w tym DBI do dostêpu do baz danych).
+%description -l pl.UTF-8
+Embperl daje moc zagnieÅ¼dÅ¼ania kodu Perla w dokumentach HTML i
+moÅ¼liwoÅ›Ä‡ budowania stron WWW z maÅ‚ych obiektÃ³w. MoÅ¼na wykorzystaÄ‡
+wszystkie dostÄ™pne moduÅ‚y Perla (w tym DBI do dostÄ™pu do baz danych).
 
 %prep
 %setup -q -n HTML-Embperl-%{version}
