@@ -3,7 +3,7 @@ Summary:	Embedded perl - building dynamic Websites with Perl
 Summary(pl.UTF-8):	Osadzony perl - budowanie dynamicznych stron przy użyciu Perla
 Name:		embperl
 Version:	1.3.6
-Release:	3
+Release:	4
 License:	GPL
 Group:		Networking/Daemons
 Source0:	ftp://ftp.dev.ecos.de/pub/perl/embperl/HTML-Embperl-%{version}.tar.gz
@@ -17,7 +17,6 @@ BuildRequires:	perl(CGI)
 BuildRequires:	perl-HTML-HeadParser
 BuildRequires:	perl-libwww
 BuildRequires:	rpm-perlprov >= 4.1-13
-Requires:	perl(DynaLoader) = %(%{__perl} -MDynaLoader -e 'print DynaLoader->VERSION')
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_noautoreqdep	'perl(CGI)'
