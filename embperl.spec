@@ -34,7 +34,7 @@ wszystkie dostępne moduły Perla (w tym DBI do dostępu do baz danych).
 
 %prep
 %setup -q -n HTML-Embperl-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__perl} Makefile.PL \
